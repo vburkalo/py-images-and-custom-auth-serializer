@@ -141,7 +141,9 @@ class TicketSerializer(serializers.ModelSerializer):
 
 
 class TicketListSerializer(TicketSerializer):
-    movie_session = MovieSessionListSerializer(many=False, read_only=True)
+    movie_session = MovieSessionListSerializer(
+        many=False, read_only=True
+    )
 
 
 class TicketSeatsSerializer(TicketSerializer):
